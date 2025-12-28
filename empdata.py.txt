@@ -1,0 +1,15 @@
+import csv
+
+with open("empcsvread.csv", "w", newline="") as fp:
+    fn = ['empid', 'empdept', 'empcity']
+    w = csv.DictWriter(fp, fieldnames=fn)
+
+    w.writeheader()
+
+    w.writerow({'empid': 110, 'empdept': 'SE', 'empcity': 'Mumbai'})
+
+    w.writerows([
+        {'empid': 106, 'empdept': 'IT', 'empcity': 'Pune'},
+        {'empid': 107, 'empdept': 'pharma', 'empcity': 'nashik'},
+        {'empid': 108, 'empdept': 'analyst', 'empcity': 'Hyderabad'}
+    ])
