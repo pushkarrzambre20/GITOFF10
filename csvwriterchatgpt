@@ -1,0 +1,12 @@
+import csv
+
+data = [
+    ["ID", "Name", "Age", "Department"],
+    [1, "Amit", 24, "QA"],
+    [2, "Neha", 26, "QC"],
+    [3, "Rahul", 25, "Regulatory"]
+]
+
+with open("employees.csv", mode="w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
